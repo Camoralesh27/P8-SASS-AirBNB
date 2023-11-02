@@ -40,3 +40,13 @@
     gap: $espaciado;
     grid-template-columns: repeat($columnas, 1fr);
 }
+
+@mixin scrollHorizontal {
+    overflow-y: hidden; 
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory; /* lo colocas para que haga snap */
+
+    > * { /* al primer hijo ">", puede ser div, clase, id, etc. cualquier elemento "*".  */
+        scroll-snap-align: center;/* le colocas en qué posición se alinia el snap */
+    }
+}
