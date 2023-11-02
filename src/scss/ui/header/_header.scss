@@ -17,6 +17,10 @@
 
     }
 
+    &__busqueda-label { //* lo agregue
+        font-weight: 700;
+    }
+
     &__busqueda-boton {
         @include m.boton(v.$blanco , v.$primario)
     }
