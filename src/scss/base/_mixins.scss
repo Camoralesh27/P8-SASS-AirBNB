@@ -46,6 +46,10 @@
     overflow-x: scroll;
     scroll-snap-type: x mandatory; /* lo colocas para que haga snap */
 
+    @include tablet {   /* quita la barra scroll horizontal cuando está en desktop */
+        overflow-x: unset;
+    }
+
     > * { /* al primer hijo ">", puede ser div, clase, id, etc. cualquier elemento "*".  */
         scroll-snap-align: center;/* le colocas en qué posición se alinia el snap */
     }
